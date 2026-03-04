@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>老姐の生日祝福</title>
+    <title>谢倬林の生日祝福</title>
     <style>
         :root {
             --pink: #ff69b4;
@@ -138,10 +138,10 @@
 
         <!-- 卡片背面 -->
         <div class="card-back">
-            <h1>🎉 老姐の躺赢秘籍 🎉</h1>
+            <h1>🎉谢倬林の躺赢秘籍 🎉</h1>
             <div class="message">
                 <p>奉天承运，锦鲤诏曰：</p>
-                <p>特封老姐为：</p>
+                <p>特封谢倬林为：</p>
                 <p>🏆 <span class="highlight">不劳而获</span> 首席体验官</p>
                 <p>🎖️ <span class="highlight">坐享其成</span> 终身成就者</p>
                 <p>🏅 <span class="highlight">无功受禄</span> 特级受益人</p>
@@ -152,11 +152,21 @@
     </div>
 </div>
 
+<!-- 添加背景音乐 -->
+<audio id="backgroundMusic" loop>
+    <source src="屏幕录制 2026-01-15 212133.mp3" type="audio/mpeg">
+    您的浏览器不支持音频元素。
+</audio>
+
 <script>
     function openCard() {
         const card = document.getElementById('card');
         card.classList.add('flipped');
         launchFireworks();
+        // 打开卡片时播放音乐
+        document.getElementById('backgroundMusic').play().catch(error => {
+            console.log('音乐播放失败，请检查音频文件URL是否正确:', error);
+        });
     }
 
     function closeCard() {
@@ -178,7 +188,7 @@
             }, 1500);
         }
 
-        new Audio('https://actions.google.com/sounds/v1/cartoon/clown_horn.ogg').play();
+        //new Audio('https://actions.google.com/sounds/v1/cartoon/clown_horn.ogg').play();
     }
 </script>
 </body>
